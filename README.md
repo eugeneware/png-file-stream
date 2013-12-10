@@ -29,3 +29,12 @@ pngFileStream('test/**/frame?.png')
   .pipe(encoder.createWriteStream({ repeat: -1, delay: 500, quality: 10 }))
   .pipe(fs.createWriteStream('myanimated.gif')));
 ```
+
+You can skip the PNG to RAW Pixel Data conversion, by passing an optional "false"
+value through:
+
+``` js
+var pngFileStream = require('png-file-stream');
+pngFileStream('test/**/frame?.png', false)
+  .pipe(fs.createWriteStream('myconcatendatedpngs.dat')));
+```
