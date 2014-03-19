@@ -1,6 +1,6 @@
 {
   "name": "png-file-stream",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Stream a glob list of PNG files as bitmaps",
   "main": "index.js",
   "scripts": {
