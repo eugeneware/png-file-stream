@@ -9,7 +9,7 @@ module.exports = function (glob, decode) {
     write = passthru;
   }
 
-  return gs.create(glob).pipe(through({ objectMode: true }, write));
+  return gs(glob).pipe(through({ objectMode: true }, write));
 
   function decodeFiles(chunk, enc, next) {
     var self = this;
